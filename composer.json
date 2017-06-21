@@ -5,7 +5,8 @@
     "keywords": [
         "tsf",
         "laravel",
-        "neo4j php client"
+        "neo4j",
+        "php"
     ],
     "homepage": "https://github.com/tsf/laravel-neo4j-php-client",
     "license": "MIT",
