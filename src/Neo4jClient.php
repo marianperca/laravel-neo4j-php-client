@@ -11,7 +11,7 @@ class Neo4jClient
      */
     protected $config = [];
 
-    private $uri_format = 'http://%s:%s@%s:%d'; // format 'http://USER:PASS@HOST:PORT';
+    private $uri_format = '%s://%s:%s@%s:%d'; // format 'PROTOCOL://USER:PASS@HOST:PORT';
 
     /**
      * @param array $config
@@ -33,21 +33,21 @@ class Neo4jClient
      */
     public function build()
     {
-        $uri = sprintf($this->uri_format, $this->getUser(), $this->getPass(), $this->getHost(), $this->getPort());
+        $uri = sprintf($this->uri_format, $this->getProtocol(), $this->getUser(), $this->getPass(), $this->getHost(), $this->getPort());
 
         return ClientBuilder::create()
-            ->addConnection('default', $uri)
+            ->addConnection($this->getProtocol(), $uri)
             ->build();
     }
 
     /**
-     * Get the connection username
+     * Get the connection protocol
      *
      * @return string
      */
-    private function getUser()
+    private function getProtocol()
     {
-        return $this->getConfig('username');
+        return $this->getConfig('protocol', 'default');
     }
 
     /**
@@ -60,6 +60,16 @@ class Neo4jClient
     public function getConfig($option, $default = null)
     {
         return array_get($this->config, $option, $default);
+    }
+
+    /**
+     * Get the connection username
+     *
+     * @return string
+     */
+    private function getUser()
+    {
+        return $this->getConfig('username');
     }
 
     /**
