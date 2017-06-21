@@ -3,6 +3,7 @@
 namespace TSF\Neo4jClient;
 
 use GraphAware\Neo4j\Client\ClientBuilder;
+use RuntimeException;
 
 class Neo4jClient
 {
@@ -47,7 +48,12 @@ class Neo4jClient
      */
     private function getProtocol()
     {
-        return $this->getConfig('protocol', 'default');
+        $protocol = $this->getConfig('protocol', 'default');
+
+        if (!in_array($protocol, ['http', 'bolt']))
+            throw new RunTimeException('Invalid protocol for Neo4j connection.');
+
+        return $protocol;
     }
 
     /**

@@ -1,8 +1,8 @@
 <?php
 
 return [
-    // Connection protocol. It can be: default (for http) or bolt
-    'protocol' => 'default',
+    // Connection protocol. It can be: http or bolt
+    'protocol' => 'http',
 
     'host'     => 'localhost',
     'port'     => '7474',
