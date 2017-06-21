@@ -2,7 +2,7 @@
  
 Simple laravel wrapper for [GraphAware Neo4j PHP Client](https://github.com/graphaware/neo4j-php-client)
 
-#Installation
+# Installation
 
 Require this package in your `composer.json` and update composer. Run / add either of the below two commands
 ```php
@@ -33,7 +33,7 @@ php artisan vendor:publish --provider="TSF\Neo4jClient\Neo4jServiceProvider"
 
 Update `config/neo4j.php` with your connection data.
 
-#How to use
+# How to use
 
 ```php
 Neo4jClient::run('CREATE (n:Person)');
