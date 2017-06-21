@@ -1,0 +1,37 @@
+{
+    "name": "tsf/laravel-neo4j-php-client",
+    "type": "library",
+    "description": "Laravel wrapper for Neo4j-PHP-Client",
+    "keywords": [
+        "tsf",
+        "laravel",
+        "neo4j php client"
+    ],
+    "homepage": "https://github.com/tsf/laravel-neo4j-php-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marian Perca",
+            "email": "marian@thesoftwarefarm.co.uk"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.*",
+        "php": "~5.6|~7.0",
+        "graphaware/neo4j-php-client": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "TSF\\Neo4jClient\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
