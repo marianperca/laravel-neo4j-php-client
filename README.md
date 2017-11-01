@@ -6,11 +6,11 @@ Simple laravel wrapper for [GraphAware Neo4j PHP Client](https://github.com/grap
 
 Require this package in your `composer.json` and update composer. Run / add either of the below two commands
 ```php
-"tsf/laravel-neo4j-php-client": "dev-master"
+"tsf/laravel-neo4j-php-client": "^1.0"
 ```
 or
 ```php
-composer require tsf/laravel-neo4j-php-client=dev-master
+composer require tsf/laravel-neo4j-php-client=^1.0
 ```
 
 After updating composer, add the ServiceProvider in `app/config/app.php`
