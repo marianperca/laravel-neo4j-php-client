@@ -17,8 +17,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.*",
-        "php": "~5.6|~7.0",
+        "illuminate/support": "5.0 - 5.8 | ^6.0 | ^7.0",
+        "php": "^7.1",
         "graphaware/neo4j-php-client": "^4.8"
     },
     "autoload": {
